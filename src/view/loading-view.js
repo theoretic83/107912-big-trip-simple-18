@@ -11,6 +11,8 @@ const createNewMessages = (massageKey) => `<p class="trip-events__msg">${EMPTY_P
 
 
 export default class LoadingView {
+  element;
+
   getTemplate(){
     return createNewMessages('loading');
   }

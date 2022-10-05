@@ -18,6 +18,9 @@ const createNewFiltersFormTemplate = () => {
 };
 
 export default class FiltersFormView {
+
+  element;
+
   getTemplate(){
     return createNewFiltersFormTemplate();
   }

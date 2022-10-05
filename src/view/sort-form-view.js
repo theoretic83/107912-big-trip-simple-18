@@ -31,6 +31,8 @@ const createNewSortFormTemplate = () => {
 };
 
 export default class SortFormView {
+  element;
+
   getTemplate(){
     return createNewSortFormTemplate();
   }
