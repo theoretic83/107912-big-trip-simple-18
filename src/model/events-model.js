@@ -1,7 +1,18 @@
 import {generateEvent, generateOffer} from '../mock/generate-mock-event.js';
 
 export default class EventsModel {
-  offers = Array.from({length: 5}, generateOffer);
-  events = Array.from({length: 3}, generateEvent);
+  offers;
+  events;
+
+  constructor(){
+    this.offers = Array.from({length: 3}, generateOffer);
+    const offersIds = this.offers.map((current)=>(current.id));
+    this.events = Array.from({length: 5}, generateEvent(offersIds));
+  }
+
   getEvents = () => this.events;
+  getOffers = () => {
+    this.events.offersIds;
+    this.offers.filter()
+  }
 }

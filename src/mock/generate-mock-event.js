@@ -30,7 +30,7 @@ const generateOffer = ()=>(
   {
     id: getRandomInt(0, 1000),
     title: 'Upgrade to a business class',
-    price: 120
+    price: getRandomInt(0, 10000)
   }
 );
 
@@ -44,12 +44,12 @@ const generateOffersByType = ()=>(
 
 const generateEvent = (offersIDs)=>(
   {
-    basePrice: 1100,
+    basePrice: getRandomInt(0, 10000),
     dateFrom: '2019-07-10T22:55:56.845Z',
     dateTo: '2019-07-11T11:22:13.375Z',
     destination: generateDestination().id,
-    id: 0,
-    offers: [offersIDs],
+    id: getRandomInt(0, 10000),
+    offers: offersIDs,
     type: POINT_TYPE[getRandomInt(0,POINT_TYPE.length - 1)]
   }
 );
