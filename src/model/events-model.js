@@ -11,8 +11,5 @@ export default class EventsModel {
   }
 
   getEvents = () => this.events;
-  getOffers = () => {
-    this.events.offersIds;
-    this.offers.filter()
-  }
+  getOffers = () => this.offers.filter((offer)=>this.events.offersIds.find((offersId)=> offersId === offer.id));
 }
